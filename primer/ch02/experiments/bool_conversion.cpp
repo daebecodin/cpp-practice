@@ -1,6 +1,6 @@
 /*
  * Created by Durand Dyer-Branch on 2/20/26.
- * Boolean conversion
+ * Integer to Boolean conversion
  * When converting a non-bool arithmetic value to a bool object,
  * the result will be false if the value is 0 and true otherwise
 */

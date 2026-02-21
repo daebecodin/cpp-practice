@@ -1,6 +1,8 @@
-//
-// Created by Durand Dyer-Branch on 2/20/26.
-//
+/*
+ * Created by Durand Dyer-Branch on 2/20/26.
+ * When converting floating-point values to an integer, if the value is within the integers representable range
+ * the fractional part of the result will be truncated towards 0. If not, the floating point value' conversion resulting behavior is undefined
+*/
 
 
 

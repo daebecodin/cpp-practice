@@ -1,6 +1,12 @@
-//
-// Created by Durand Dyer-Branch on 2/20/26.
-//
+/*
+ * Created by Durand Dyer-Branch on 2/20/26.
+ * Boolean to Arithmetic Conversion
+ *
+ * When converting a boolean value to arithmetic types, if
+ * the boolean value is true, the result is 1, and if the boolean
+ * value is false, the result is 0.
+ * The target arithmetic type does not change the numeric value of the result
+*/
 
 
 #include <iostream>
