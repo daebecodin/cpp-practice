@@ -1,7 +1,9 @@
 /*
  * Created by Durand Dyer-Branch on 2/21/26.
  *
- *
+ * Signed arithmetic is defined by modulo 2^n, where n is the # of bits of the unsigned type.
+ * All overflow & underflow wraparound is defined behavior.
+ * The values of unsigned types can never be negative
 */
 
 #include <iostream>
