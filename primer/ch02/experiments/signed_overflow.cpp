@@ -18,6 +18,7 @@ int main()
 
     x = numeric_limits<int>::max();
     x = x + 1;
-    cout << x << '\n';
+    cout << "Lowest representable for type:\x09" << x << '\n';
+    cout << "System dependant\x09 Undefined behavior";
 
 }

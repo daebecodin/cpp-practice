@@ -13,15 +13,23 @@ using namespace std;
 
 int main()
 {
-    unsigned int u = 0;
-    u = u -1;
+    cout << "Unsigned Wraparound\x0a";
+    unsigned int u = 2;
+    unsigned int u2 = numeric_limits<unsigned int>::max();
     cout <<"Using 0" << '\n';
-    cout << u << '\n' << '\n';
+    cout << "Wraparound to largest representable value of the type\x0a";
+    unsigned int u3 = u - 0;
+    cout <<u3<< "\x0a";
+    cout << u2<< '\x0a';
+    unsigned int u4 = u2 + u3;
+    cout << u4<< '\x0a';
 
 
     u = numeric_limits<unsigned int>::max();
-    u = u + 1;
+    u = u + 1200;
     cout << "Using System Max" << '\n';
+
+
     cout << u << '\n';
 
 

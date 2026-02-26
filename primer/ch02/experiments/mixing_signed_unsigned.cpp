@@ -19,6 +19,7 @@ int main()
 {
     cout << boolalpha;
     int s = -1;
+    cout << "s before arithmetic\x0a";
     unsigned int u = 1;
     cout << (s < u) << '\n';
 

@@ -17,4 +17,3 @@ int main()
         cout << "hello" << '\n';
     }
 }
-
