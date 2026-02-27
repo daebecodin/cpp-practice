@@ -9,7 +9,6 @@
 using namespace rpt;
 using namespace std;
 
-
 int main()
 {
     cout << boolalpha;
