@@ -23,6 +23,7 @@ int main()
     int x = 44;
     int* p = &x;
 
+    pipeline_begin();
     cout << "Addresses and Values" << '\x0a';
     kv("x -> ", x); // value stored in x
     kv("&x -> ", &x); // address of x

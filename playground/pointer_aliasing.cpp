@@ -24,6 +24,7 @@ int main()
     int* p = &x; // points to x
     int* q = &x; // points to x
 
+    pipeline_begin();
     stage("Pre-State");
     kv("x -> ", x); // value of x
     kv("&x -> ", &x); // address of x

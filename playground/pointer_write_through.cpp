@@ -22,6 +22,7 @@ int main ()
     int x = 420;
     int* p = &x;
 
+    pipeline_begin();
     stage("Pre-State");
     kv("x -> ", x);
     kv("&x -> ", &x);
