@@ -64,4 +64,6 @@ int main()
         "p = q copies the address value (Pointer assignment replaces the stored address: p = q copies q's address value to p)."
         "p == q -> *p aliases x (After p = &x , p == &x and *p reads/writes x)."
     });
+
+    return 0;
 }

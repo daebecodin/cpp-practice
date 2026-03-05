@@ -52,6 +52,5 @@ int main()
         "To compare the address stored in a pointer and the address of the pointer, static cast both to const void*"
     });
 
-
     return 0;
 }

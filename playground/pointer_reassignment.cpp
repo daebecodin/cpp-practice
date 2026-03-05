@@ -77,4 +77,5 @@ int main()
         "Changing p does not change x/y (modifying pointer); changing *p does (modifying object stored)."
     });
 
+    return 0;
 };

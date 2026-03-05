@@ -78,6 +78,5 @@ int main()
         "&p != &q (pointer objects are separate variables, even when pointing to the same object (p == q))."
     });
 
-
-
+    return 0;
 }
