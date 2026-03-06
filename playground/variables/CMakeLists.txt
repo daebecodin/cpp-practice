@@ -1,5 +1,8 @@
 file(GLOB experiment_sources "*.cpp")
 
+add_executable(var_declaration_vs_definition var_declaration_vs_definition.cpp external_definition.cpp)
+target_include_directories(var_declaration_vs_definition PRIVATE ${CMAKE_SOURCE_DIR}/include)
+
 foreach(source_file ${experiment_sources})
     get_filename_component(executable_name ${source_file} NAME_WE)
     if(NOT executable_name STREQUAL "var_declaration_vs_definition" AND NOT executable_name STREQUAL "external_definition")
@@ -7,8 +10,3 @@ foreach(source_file ${experiment_sources})
         target_include_directories(${executable_name} PRIVATE ${CMAKE_SOURCE_DIR}/include)
     endif()
 endforeach()
-
-add_subdirectory(compound_types)
-add_subdirectory(conversions)
-add_subdirectory(variables)
-add_subdirectory(representation)

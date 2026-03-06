@@ -7,8 +7,3 @@ foreach(source_file ${experiment_sources})
         target_include_directories(${executable_name} PRIVATE ${CMAKE_SOURCE_DIR}/include)
     endif()
 endforeach()
-
-add_subdirectory(compound_types)
-add_subdirectory(conversions)
-add_subdirectory(variables)
-add_subdirectory(representation)
