@@ -26,7 +26,7 @@ int main() {
 });
 
     pipeline_begin();
-    stage("Representation / Ramge");
+    stage("Representation / Range");
     repr_range<char>("char");
     blank();
     repr_range<unsigned char>("unsigned char");
