@@ -67,7 +67,7 @@ int main()
         "Top-Level const can be applied to any object type and is ignored by regular value copying (the object itself is const).",
         "Low-Level const is applies to what a compound type refers or points to and is preserved in type conversions.",
         "You can add low-level const (int *p -> const int *p), but you cannot remove it (const int *p -> int *p2)",
-        "The Distinction matters copies and conversions applied from them: Top level const is ignored. Low level is preserved",
+        "The distinction matters for copies and conversions applied from them: Top level const is ignored. Low level is preserved",
     });
     return 0;
 }
