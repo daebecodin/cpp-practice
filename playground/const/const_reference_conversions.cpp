@@ -9,6 +9,7 @@ using namespace rpt;
 
 int main()
 {
+    cout << boolalpha;
     header(
       "Const Reference Conversions",
       "Show that references behave like pointers regarding low-level const: a reference-to-const can bind to a non-const object"
@@ -24,8 +25,7 @@ int main()
     int i = 420; // int
     const int ci = 67; // const int
     int &r = i; // reference to an int
-    const int &rc = i; // reference toa const int
-
+    const int &rc = i; // binding reference to a const int to int; cannot be rebound; adding low-lvl int
     kv("i -> ", i); // 420;
     kv("ci -> ", ci); // 67
     kv("r -> ", r); // 420
@@ -39,24 +39,33 @@ int main()
     stage("Comparisons");
     kv("r == i -> ", r == i); // true
     kv("rc == i -> ", rc == i); // true
-    kv("&r == &i -> ", &r == &i); // trur
+    kv("&r == &i -> ", &r == &i); // true
     kv("&rc == &i -> ", &rc == &i); // true
     blank();
 
-    i = 69;
-    rc = ci;
+    stage("Runtime Modifications");
+    i = 69; // assigning to i
+    kv("i -> ", i); // 69
+    kv("r -> ", r); // 69
+    kv("rc -> ", rc); // 69
+    blank();
 
+    stage("Compile-Time Checks");
+#if 0
+    int &bad = ci; // attempting to remove low-lvl const
+#endif
 
     classify({
-        "",
-        "",
+        "Well-Defined: binding const int& to a const or non-const object.",
+        "Ill-Formed: binding in& toa const object.",
         ""
     });
 
     rule({
-        "",
-        "",
-        ""
+        "A const reference can bind to both const and non-const objects (adding/matching const is allowed).",
+        "Binding a non-const reference to a const object is ill-formed (low-level const cannot be removed).",
+        "Low-level const is preserved in reference binding.",
+        "Binding a const reference to a non-const object does not make the object const; it only restricts modifications through that reference."
     });
     return 0;
 }
