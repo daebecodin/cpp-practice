@@ -81,7 +81,7 @@ int main()
 
     rule({
         "Plain auto drops top-level const and reference-ness.",
-        "auto& keeps reference binding in the declared type.",
+        "auto& must bind legally and keep binding constraints.",
         "const auto& can bind to temporaries."
     });
     return 0;
