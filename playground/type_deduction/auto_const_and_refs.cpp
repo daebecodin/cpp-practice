@@ -19,9 +19,10 @@ int main()
         "Objects Involved: { int i = 42, const int ci = i, int &ri = i, const int &rci = ci, auto a = ci, auto b = ri, auto c = rci, auto &d = i, auto &e = ci, const auto &f = 42 }"
     });
     int i = 42;
-    const int ci = i;
+    const int ci = i; // const int w/ value copy
     int &ri = i; // alias to i
-    const int &rci =ci; // alias to ci
+    const int &rci = ci; // alias to ci; assumes
+
 
     // Plain auto -> value copies
     auto a = ci;
