@@ -49,7 +49,7 @@ int main()
 
     classify({
         "Well-Defined: decltype(i) a = i defines an int type.",
-        "Well-Defined: decltype((i)) b = i defined an int& type.",
+        "Well-Defined: decltype((i)) b = i defines an int& type.",
         ""
     });
 
