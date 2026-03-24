@@ -1,3 +1,9 @@
 # JetBrains / CLion
 .idea/
 *.iml
+
+# macOS
+.DS_Store
+
+# Build artifacts
+build/
