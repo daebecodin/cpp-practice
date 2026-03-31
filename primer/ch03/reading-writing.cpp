@@ -2,7 +2,9 @@
 #include <iostream>
 using namespace std;
 using std::string;
-using std::cout, std::cin, std::endl, std::boolalpha;
+using std::cout;
+using std::cin;
+using std::endl;
 
 int main() 
 {
@@ -17,10 +19,13 @@ int main()
     string s6("copy");
     string s7 = string(6,'d');
 
-
-    
-
-
+    /*
+     * 
+     */
+    string s8, s9;
+    cin >> s8 >> s9;
+    cout << "your numbers are: " << s8 << " " << s9 << '\x0a';
     return 0;
 
+    
 }
