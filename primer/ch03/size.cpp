@@ -9,8 +9,8 @@ int main()
     while (getline(cin, line)) {
         if(line.size() < 80) {
             cout << line << '\x0a';
-            return 1;
         }
+            return 1;
     }
     return 0;
 
