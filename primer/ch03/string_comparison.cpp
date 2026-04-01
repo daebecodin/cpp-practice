@@ -44,6 +44,36 @@ int main()
     blank();
 
     stage("Post-State");
+    kv("a < b -> ", a < b); // true
+    kv("c > a -> ", c > a); // true
+    kv("d < e -> ", d < e); // true
+    kv("d > f -> ", d > f); // true
+    kv("g < h -> ", g < h); // true
+    blank();
+
+    stage("Compile-Time Checks");
+    kv("a -> ", "type std::string");
+    kv("b -> ", "type std::string");
+    kv("c -> ", "type std::string");
+    kv("d -> ", "type std::string");
+    kv("e -> ", "type std::string");
+    kv("f -> ", "type std::string");
+    kv("g -> ", "type std::string");
+
+    classify({
+        "Well-Defined: a < b results to true.",
+        "Well-Defined: c > a results to true.",
+        "Well-Defined: d < e results to true.",
+        "Well-Defined: d > f results to true.",
+        "Well-Defined: g < h results to true.",
+       });
+
+    rule({
+        "std::string compares lexicgraphically..",
+        "compares left to right; the first difference decides; if one ends first when matching, that string is the smaller one.",
+        "case-sensitive: uppercase and lowercase have different character values."
+    });
+
     return 0;
 
 }
