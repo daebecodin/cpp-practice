@@ -11,4 +11,3 @@ while (val <= 10) {
 cout << "Sum of 1-10 inclusive -> " << sum << endl;
 return 0;
 }
-<LeftMouse>
