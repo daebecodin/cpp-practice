@@ -14,5 +14,4 @@ int main()
     cout << separate << endl;
     
     return 0;
-
 }
