@@ -6,8 +6,7 @@
 
 /*
  * example program showing incorrectly(nested) used comments
- * /* this prints the sum of the numbers provided */
-
+ * This demonstrates that nested block comments don't work in C++
  */
 int main()
 {

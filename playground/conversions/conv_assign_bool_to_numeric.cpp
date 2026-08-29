@@ -21,11 +21,9 @@ int main()
     });
 
     cout << "Enter your bool value (true / false): ";
-    bool b{};
-    if (!(cin >> b)) {
-        note("Input error: expected 'true' or 'false'.");
-        return 1;
-    }
+    bool b = getInput("Enter another bool value: ");
+
+
 
     pipeline_begin();
     stage("Representation / Range");

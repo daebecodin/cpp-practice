@@ -1,0 +1,2 @@
+- parameter list is implicitly void if empty or we can declare explicitly
+- arguments are initializers for func param; must match corresponding type

@@ -26,19 +26,19 @@ void cmnt2()
 void cmnt3()
 {
     /*
-     * this is illegal because the output operater has no rhs opperand due to the block comment using the delimters
+     * this is illegal because the output operator has no rhs operand due to the block comment using the delimiters
      * there is essentially no given output
      * to fix, all we need to do is provide actual output not between 2 delimiters
      */
-    std::cout << /* "/*" */;
+    std::cout << "/*";  // Fixed: moved string outside the comment
 }
 
 void cmnt4()
 {
     /*
-     *`
+     * Another example of tricky comment nesting
      */
-    std::cout << /*  "*/"  /*  "/*"  */;
+    std::cout << "*/" /*  "/*"  */;
 }
 
 int main()

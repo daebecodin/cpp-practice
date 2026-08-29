@@ -20,11 +20,8 @@ int main()
     });
 
     cout << "Enter a +/- floating-point value: ";
-    double d{};
-    if (!(cin >> d)) {
-        note("Input error detected. Plz enter a valid floating-point value");
-        return 1;
-    }
+    double d = getInput("Enter another gloating-point value");
+
 
     pipeline_begin();
     stage("Representation / Range");

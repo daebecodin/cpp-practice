@@ -203,6 +203,22 @@ inline bool next_is_quit() {
     return c == 'q' || c == 'Q';
 }
 
-} // namespace rpt
+/// Read a single int from std::cin and return it.
+/// Loops until valid input is received.
+inline int getInput(const string &var) {
+    int n{};
+
+    std::cout << var << ": ";
+
+    while (!(std::cin >> n)) {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "try again: ";
+    }
+    return n;
+}
+}
+
+// namespace rpt
 
 #endif // CPP_PRACTICE_REPORT_H

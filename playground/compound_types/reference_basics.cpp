@@ -17,14 +17,18 @@ int main()
     );
 
     inputs({
-        "No Inputs",
         "Objects Involved: {int x, int y, int &rx}"
     });
 
     pipeline_begin();
     stage("Pre-State");
-    int x = 420;
-    int y = 69;
+
+    std::cout << "define x: ";
+    int x = getInput("x");
+
+    std::cout << "define y: ";
+    int y = getInput("y");
+
     int &rx = x; // reference to x
 
     kv("x -> ", x); // value of x

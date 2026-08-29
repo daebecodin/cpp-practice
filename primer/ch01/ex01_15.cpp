@@ -7,23 +7,24 @@
 
 void syntaxE()
 {
-    //colon instead of semicolon
-    std::cout << "hello, errors" << std::endl:
+    // Fixed: colon instead of semicolon
+    std::cout << "hello, errors" << std::endl;
 
-    std::cout >> "should be output operator" << std::endl;
+    // Fixed: should be output operator
+    std::cout << "should be output operator" << std::endl;
 
-    // no quotes around string literal
-    std::cout << no quotes around string << std::endl;
+    // Fixed: no quotes around string literal
+    std::cout << "quotes around string" << std::endl;
 
-    // missing second output operater
-    std::cout << "hello, ; " "world" std::endl;
+    // Fixed: missing second output operator
+    std::cout << "hello, ; " << "world" << std::endl;
 
 }
 
 void typeE()
 {
-    // this variable expects to be initialized to an integer but we give it a string literal
-    int num = "4"
+    // Fixed: this variable expects to be initialized to an integer but we give it a string literal
+    int num = 4;
 }
 
 int main()
