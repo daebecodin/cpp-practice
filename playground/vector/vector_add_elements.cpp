@@ -10,22 +10,47 @@ using std::string;
  */
 
 vector<int> addInt() 
-{
-    int n;
+{ 
     vector<int> numbers;
-    while (std::cin >> n) {
-        for (int i = 0; i <= n; ++n){
-            numbers.push_back(n);
-            std::cout << n << " added to vector." << '\x0a';
-        }
+
+    int size{};
+    std::cout << "How many elements?: ";
+    std::cin >> size;
+   
+    for (int i = 0; i < size; ++i) {
+        int n{};
+        std::cout << "Enter an int for index " << i << ": ";
+        std::cin >> n;
+        numbers.push_back(n);
     }
 
     return numbers;
 }
 
+vector<string> addString()
+{
+    vector<string> words;
+
+    int size{};
+    std::cout << "How many strings?: ";
+    std::cin >> size;
+
+    for (int i = 0; i < size; ++i) 
+    {
+        string word;
+        std::cout << "Enter a word for index " << i << ": ";
+        std::cin >> word;
+        words.push_back(word);
+
+    }
+
+    return words;
+}
+
 int main() 
 {
     vector<int> v1 = addInt();
+    vector<string> v2 = addString();
     std::cout << "in main" << '\x0a';
 
     int i{};
@@ -35,6 +60,15 @@ int main()
         std::cout << i << ": " << n << '\x0a';
         ++i;
     }
+
+    i = 0;
+
+    for (string &s : v2)
+    {
+        std::cout << i << ": " << s << '\x0a';
+        ++i;
+    }
+
     return 0;
 
 } 
