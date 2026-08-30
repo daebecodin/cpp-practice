@@ -55,7 +55,7 @@ int main()
 
     int i{};
 
-    for (int &n : v1)
+    for (const int &n : v1)
     {
         std::cout << i << ": " << n << '\x0a';
         ++i;
@@ -63,7 +63,7 @@ int main()
 
     i = 0;
 
-    for (string &s : v2)
+    for (const string &s : v2)
     {
         std::cout << i << ": " << s << '\x0a';
         ++i;
