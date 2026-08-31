@@ -37,10 +37,7 @@ int main()
         int sum = a + b;
         pairCount++;
         cout << "Pair " << pairCount << ": " << sum << '\n';
-
     }
-
-
     return 0;
 
 } 
