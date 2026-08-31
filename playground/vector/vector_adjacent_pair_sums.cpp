@@ -24,13 +24,14 @@ int main()
     if (nList.size() < 2) 
     {
         cout << "not enough elements";
+        std::cout << "";
         return 0;
     }
 
     cout << "Summed Pairs\n";
     size_t i{};
     int pairCount{};
-    for (i = 0; i + 1 < nList.size(); ++i)
+    for (i = 0; i + 1 < nList.size(); i += 2)
     {
         int a = nList[i];
         int b = nList[i + 1];
