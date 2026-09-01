@@ -14,6 +14,17 @@ target_precompile_headers(pch INTERFACE include/pch.h)
 file(GLOB_RECURSE HEADER_FILES "include/*.h")
 add_custom_target(headers SOURCES ${HEADER_FILES})
 
-add_subdirectory(primer)
-add_subdirectory(projects)
-add_subdirectory(playground)
+function(add_child_directories)
+    file(GLOB child_cmake_files
+        CONFIGURE_DEPENDS
+        RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}"
+        "${CMAKE_CURRENT_SOURCE_DIR}/*/CMakeLists.txt"
+    )
+
+    foreach(child_cmake_file IN LISTS child_cmake_files)
+        get_filename_component(child_directory "${child_cmake_file}" DIRECTORY)
+        add_subdirectory("${child_directory}")
+    endforeach()
+endfunction()
+
+add_child_directories()

@@ -6,3 +6,4 @@ foreach(source_file ${experiment_sources})
     target_link_libraries(${executable_name} PRIVATE pch)
 endforeach()
 
+add_child_directories()

@@ -1,4 +1,4 @@
-file(GLOB experiment_sources "*.cpp")
+file(GLOB_RECURSE experiment_sources CONFIGURE_DEPENDS "*.cpp")
 
 foreach(source_file ${experiment_sources})
     get_filename_component(executable_name ${source_file} NAME_WE)
