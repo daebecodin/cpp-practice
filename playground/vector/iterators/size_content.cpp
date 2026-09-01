@@ -5,7 +5,7 @@
 
 #include "pch.h"
 using std::string, std::vector, std::cin, std::cout;
-using std::distance;
+using std::distance; // returns steps between two iterators; use to calculate index
 
 int main() 
 {
