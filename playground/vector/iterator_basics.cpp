@@ -13,13 +13,20 @@ using std::cin, std::cout;
 using std::string, std::vector;
 using std::size_t;
 
+
+
+
 int main() 
 {
 
     vector<int> v;
-    auto b = v.begin(); // first element or character in v if it exists
+
+    // first element or character in v if it exists
+    auto b = v.begin(); 
+
     // off-the-end iterator
-    auto e = v.end(); // positioned one slot past the final element or character in v is it exists. all items processed
+    // positioned one slot past the final element or character in v is it exists. all items processed
+    auto e = v.end();
     int input{};
 
     cout << "Add items to vector: ";
