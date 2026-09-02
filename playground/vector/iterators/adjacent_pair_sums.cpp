@@ -24,6 +24,7 @@ int main()
 
     string ogVecMsg("Original Vector: ");
     cout << ogVecMsg;
+
     for (auto n = v.begin(); n != v.end(); ++n)
     {
         if (n == v.end() -1)
@@ -42,26 +43,27 @@ int main()
 
     string newVecMsg("Modified Vector: ");
     cout << newVecMsg;
-    bool first{true};
+
+    bool firstElement{true}; // marker for the first element
     for (auto n = v.cbegin(); n != v.cend(); ) 
     {
-        int sum = *n;
-        ++n;
+        int sum = *n; // adds current element to pair sum; created fresh each run
+        ++n; // move iterator to second element in pair
 
-        if (n != v.cend()) 
+        if (n != v.cend())  // if a second element exists
         {
-            sum += *n;
-            ++n;
+            sum += *n; // add the second element
+            ++n; // move iterator to the beginning of the next pair
         }
 
-        if (!first) 
+        if (!firstElement) // all elements after the first
         {
             cout << ", ";
         }
 
-        cout << sum;
+        cout << sum; // print pair sum
 
-        first = false;
+        firstElement = false; // first iteration over; later sums need a comma before them
     }
 
     cout << '\n';
