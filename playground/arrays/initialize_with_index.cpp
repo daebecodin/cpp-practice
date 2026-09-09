@@ -7,6 +7,7 @@
 using std::string;
 using std::cin, std::cout;
 using std::size_t;
+using std::vector;
 
 int main() 
 {
@@ -17,6 +18,7 @@ int main()
     cout << getCount << count << '\n';
 
     int arr[count];
+
 
     string initMsg("Initializing elements from index");
     cout << initMsg << '\n';
@@ -33,11 +35,13 @@ int main()
 
     string copyMsg("Copy of the previous array");
     cout << '\n' << copyMsg << '\n';
+
     int arrCopy[count];
     for (size_t i = 0; i < count; ++i)
     {
         arrCopy[i] = arr[i];
     }
+    
     for (int i : arrCopy)
     {
         cout << arrCopy[i] << " ";
