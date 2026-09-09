@@ -31,7 +31,17 @@ int main()
         cout << i << " ";
     }
 
-
+    string copyMsg("Copy of the previous array");
+    cout << '\n' << copyMsg << '\n';
+    int arrCopy[count];
+    for (size_t i = 0; i < count; ++i)
+    {
+        arrCopy[i] = arr[i];
+    }
+    for (int i : arrCopy)
+    {
+        cout << arrCopy[i] << " ";
+    }
 
     return 0;
 
