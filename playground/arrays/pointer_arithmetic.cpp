@@ -26,6 +26,7 @@ int main()
 
     int m = *(arr + mid); // dereferencing the pointer after the arithmetic
 
+
     cout << '\n' << m;
 
 
