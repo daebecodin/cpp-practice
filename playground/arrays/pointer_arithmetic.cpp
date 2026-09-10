@@ -22,6 +22,12 @@ int main()
 
     }
 
+    int mid = sz / 2;
+
+    int m = *(arr + mid); // dereferencing the pointer after the arithmetic
+
+    cout << '\n' << m;
+
 
     return 0;
 
