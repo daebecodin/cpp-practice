@@ -1,4 +1,4 @@
-# cpp-practice
+# cpp-playground
 
 My C++ journey as an autodidact.
 
