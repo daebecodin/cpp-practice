@@ -1,17 +1,24 @@
-file(GLOB experiment_sources "*.cpp")
+cmake_minimum_required(VERSION 3.20)
 
-add_executable(var_declaration_vs_definition var_declaration_vs_definition.cpp external_definition.cpp)
-target_include_directories(var_declaration_vs_definition PRIVATE ${CMAKE_SOURCE_DIR}/include)
-target_link_libraries(var_declaration_vs_definition PRIVATE pch)
+if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
+    project(cpp_playground_variables LANGUAGES CXX)
+endif()
 
-foreach(source_file ${experiment_sources})
-    get_filename_component(executable_name ${source_file} NAME_WE)
-    if(NOT executable_name STREQUAL "var_declaration_vs_definition" AND 
-       NOT executable_name STREQUAL "external_definition" AND
-       NOT executable_name STREQUAL "var_define_near_use" AND
-       NOT executable_name STREQUAL "var_init_vs_assign")
-        add_executable(${executable_name} ${source_file})
-        target_include_directories(${executable_name} PRIVATE ${CMAKE_SOURCE_DIR}/include)
-        target_link_libraries(${executable_name} PRIVATE pch)
-    endif()
-endforeach()
+include("${CMAKE_CURRENT_LIST_DIR}/../cmake/CppPlayground.cmake")
+
+cpp_playground_add_executable(
+    var_declaration_vs_definition
+    SOURCES
+        var_declaration_vs_definition.cpp
+        external_definition.cpp
+)
+
+cpp_playground_add_executables(
+    EXCLUDE
+        external_definition
+        var_declaration_vs_definition
+        var_define_near_use
+        var_init_vs_assign
+)
+
+cpp_playground_add_child_directories()

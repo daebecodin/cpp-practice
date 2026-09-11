@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.20)
 
 if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
-    project(cpp_playground_compound_types LANGUAGES CXX)
+    project(cpp_playground_arrays LANGUAGES CXX)
 endif()
 
 include("${CMAKE_CURRENT_LIST_DIR}/../cmake/CppPlayground.cmake")
